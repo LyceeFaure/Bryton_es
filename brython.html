@@ -1,0 +1,97 @@
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython_stdlib.js">
+    </script>
+    
+    <style>
+    *{
+        font-family: sans-serif;
+        font-weight: normal;
+        font-size: 1.1em;
+    }
+    td{
+        background-color: #ccc;
+        padding: 10px 30px 10px 30px;
+        border-radius: 0.2em;
+        text-align: center;
+        cursor: default;
+    }
+    #result{
+        border-color: #000;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px 30px 10px 30px;
+      text-align: right;
+  }
+    </style>
+</head>
+
+<body>
+
+<script type="text/python">
+
+from browser import document, html 
+
+document.attach("Bonjour !")
+
+print("cava ?")
+
+calc = html.TABLE()
+calc <= html.TR(html.TH(html.DIV("0", id="result"), colspan=3) +
+                html.TD("C", id="clear"))
+lines = ["789/",
+         "456*",
+         "123-",
+         "0.=+"]
+
+calc <= (html.TR(html.TD(x) for x in line) for line in lines)
+
+document <= calc
+result = document["result"]
+<html>
+<head>
+<script src="/src/brython.js"></script>
+<script src="/src/brython_stdlib.js"></script>
+</head>
+  <head> 
+		 <title> Empire </title>
+	</head>
+
+<body>
+  <head> 
+		  <title> Empire </title>
+  </head>
+  
+	  Empire est une série télévisée créée par Lee Daniels et Danny Strong qui a commencé à être diffusée aux Etats-Unis en janvier 2015. Elle raconte l'histoire d'un ancien dealeur de drogue devenu magnat de la musique et à la tête d'un label, qui découvre qu'il souffre de la maladie de Charcot
+		
+<script type="text/python">
+
+from browser import document
+from browser.widgets.dialog import InfoDialog
+
+def click(ev):
+    InfoDialog("Hello", f" Qui est {document['zone'].value} ?")
+
+# associe une fonction à l'événement "click" sur le bouton
+document["echo"].bind("click", click)
+
+</script>
+<input id="zone">
+<button id="echo">click !</button>
+  
+  <p> Présentation des personnages </p>
+
+  <p> Lucious Lyon est une légende vivante du hip-hop. Depuis une quinzaine d'années, il est l'un des plus riches producteurs et rappeur américains avec sa maison de disque : Empire    Entertainment. Mais les médecins annoncent à Lucious qu'il est atteint d'une maladie incurable : la sclérose latérale amyotrophique (aussi appelée maladie de Charcot). Il n'a que très peu de temps pour désigner lequel de ses trois fils lui succédera. Si deux d'entre eux, Jamal et Hakeem, sont des artistes débutants mais talentueux, le troisième, Andre, est un homme d'affaires prêt à tout pour prendre la tête de la compagnie. 
+  </p>
+  <img src= https://static.wikia.nocookie.net/empire-serie/images/8/85/LuciousLyon.PNG/revision/latest/scale-to-width/360?cb=20200618135725&path-prefix=fr>
+</body>
+
+</html>
+<script type="text/python" src="test.bry"></script>
